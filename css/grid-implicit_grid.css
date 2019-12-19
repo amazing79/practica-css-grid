@@ -1,0 +1,32 @@
+.contenedor{
+    display: grid;
+    grid-gap: 20px;
+    gap: 20px; /*version nueva. ya que grid-gap paso a quedar desactualizada.*/
+    /*IMPORTANTE 
+        aca definimos una grilla de 3X3, pero que pasa si se agregan mas elementos?
+        Esto se conoce como grid implicita (implicit grid). Para afectar a ellos elemntos
+        se usa la propiedad grid-auto-rows | grid-auto-columns
+    */
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 200px 100px 200px;
+    /*como se van a comportar los elementos que se agreguen automaticamente*/
+    grid-auto-rows: 400px;
+    /* grid-auto-flow cambia el sentido de la grilla. Esto puede afectar la visualizacion
+       En este caso, se debe usar grid-auto-columns para ajustarlo
+    */
+    /* dense: este valor, rellena los huecos que pueden quedar en las grillas posicionando 
+        elementos que puedan caber en esos huecos. 
+    */
+    grid-auto-flow: row dense; /* se pude combinar con column */
+    
+}
+
+.contenedor .span2{
+    grid-column: span 2;
+    background-color: salmon;
+}
+
+.contenedor .span3{
+    grid-column: span 3;
+    background-color: teal;
+}

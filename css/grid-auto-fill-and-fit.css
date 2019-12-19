@@ -1,0 +1,10 @@
+.contenedor{
+    display: grid;
+    grid-gap: 20px;
+    gap: 20px; /*version nueva. ya que grid-gap paso a quedar desactualizada.*/
+    /*auto fill y auto fit nos sirve para completar automaticamente la cantidad de filas
+      se suele usar con la funcion repeat
+    */
+    /*grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* agrega filas pero sin ocupar todo*/
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /*si en la fila, sobra lugar, ensancha los elementos para abarcar todo*/
+}

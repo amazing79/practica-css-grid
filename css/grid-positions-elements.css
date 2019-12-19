@@ -1,0 +1,28 @@
+.contenedor{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px) ;
+    grid-gap: 20px;
+    /* Aliena elementos horizontalmente */
+    /* Otros valores 
+        auto, strech : estiran el elemnto para ocupar todo el ancho de su celda
+        end: lo alinea al final 
+        center: lo centra horizontalmente
+    */
+    justify-items: center;
+    /* Alinea elementos verticalmente */
+     /* Otros valores 
+        auto, strech : estiran el elemnto para ocupar todo el alto de su celda
+        end: lo alinea al final 
+        center: lo centra verticalmente
+    */
+    align-items: center;
+}
+
+.contenedor .item{
+    /*con cssgrid, podemos especificar el comportamiento de un elmento en particular*/
+    background-color: rgb(255, 187, 0);
+    justify-self: stretch; /*Si pusiera width 100%, no tendria el mismo comportamiento*/
+    /*width: 100%; /*Abarca el todo el espacio de su ancho disponible, mas alla de su celda */
+    align-self: stretch;
+}

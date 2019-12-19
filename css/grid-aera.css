@@ -1,0 +1,41 @@
+.contenedor{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr) ;
+    /*Para facilitar el diseño, se crea areas. Luego será mas facil adaptarlo
+    Tener en cuenta que la cantidad de elementos deben coincidir con la cantidad de areas
+    Por ejemplo. Si tengo un header que ocupa 3 columnas, necesito solo uno
+    */
+    grid-template-areas: "header    header  header"
+                         "sidebar-1 main    sidebar-2"
+                         "sidebar-1 widget  sidebar-2"
+                         "footer    footer  footer";
+    grid-gap: 20px;
+}
+
+/* Una vez aplicado la plantilla, empezamos a dibujar los items en ella*/
+.contenedor .header{
+    grid-column: header;
+    background-color: salmon;
+}
+
+.contenedor .sidebar-1{
+    grid-area: sidebar-1;
+    background-color: slategray;
+}
+
+.main{
+    grid-area: main;
+}
+
+.sidebar-2{
+    grid-area: sidebar-2;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.widget{
+    grid-area: widget;
+}

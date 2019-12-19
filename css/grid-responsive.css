@@ -1,0 +1,79 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #eee;
+    font-size: 16px;
+    color: #000;
+}
+
+header{
+    font-size: 30px;
+    padding: 20px;
+    background-color:#12203e;
+    color: #fff;
+    grid-area: header;
+    text-transform: uppercase;
+}
+
+section{
+    background-color: #fff;
+    padding: 20px;
+    grid-area: section;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: justify;
+}
+
+aside{
+    background-color:#FAA43D;
+    padding: 20px;
+    grid-area: sidebar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget-1{
+    background-color:#55A8fd;
+    padding: 20px;
+    grid-area: widget1;
+    color: #fff;
+}
+
+.widget-2{
+    background-color:#55A8fd;
+    padding: 20px;
+    grid-area: widget2;
+    color: #fff;
+}
+
+footer{
+    padding: 20px;
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    grid-area: footer;
+    text-transform: uppercase;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+/**/
+.contenedor {
+    display: grid;
+    grid-gap: 20px; /*Se usa para compatiblidad con navegadores viejos*/
+    gap: 20px;
+    grid-auto-flow: dense;
+    grid-template-areas: "header    header  header "
+                         "section   section sidebar "
+                         "widget1   widget2 sidebar "
+                         "footer    footer  footer"
+    ;
+}
