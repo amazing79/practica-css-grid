@@ -38,18 +38,20 @@ aside{
     align-items: center;
 }
 
-.widget-1{
-    background-color:#55A8fd;
-    padding: 20px;
-    grid-area: widget1;
-    color: #fff;
-}
-
+.widget-1, 
 .widget-2{
     background-color:#55A8fd;
     padding: 20px;
-    grid-area: widget2;
     color: #fff;
+    text-align: center;
+}
+
+.widget-1{
+    grid-area: widget1;
+}
+
+.widget-2{
+    grid-area: widget2;
 }
 
 footer{
@@ -70,10 +72,40 @@ footer{
     display: grid;
     grid-gap: 20px; /*Se usa para compatiblidad con navegadores viejos*/
     gap: 20px;
-    grid-auto-flow: dense;
     grid-template-areas: "header    header  header "
                          "section   section sidebar "
                          "widget1   widget2 sidebar "
                          "footer    footer  footer"
     ;
+}
+
+@media screen and (max-width:600px){
+    .contenedor{
+    grid-template-areas: "header    header "
+                         "section   section "
+                         "sidebar   sidebar "
+                         "widget1   widget2 "
+                         "footer    footer  "
+;
+
+    }
+
+}
+
+@media screen and (max-width:450px){
+    .contenedor{
+    grid-template-areas: "header  "
+                         "section "
+                         "sidebar "
+                        
+                         "footer  "
+;
+
+    }
+
+    .contenedor .widget-1,
+    .contenedor .widget-2{
+        display: none;
+    }
+
 }
