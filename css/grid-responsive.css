@@ -77,6 +77,7 @@ footer{
                          "widget1   widget2 sidebar "
                          "footer    footer  footer"
     ;
+    grid-template-columns: 1fr 1fr 1fr; /*Sino se especifica, las columnas tomaran tamaño de acuerdo a su contenido*/
 }
 
 @media screen and (max-width:600px){
