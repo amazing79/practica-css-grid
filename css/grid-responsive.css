@@ -24,9 +24,14 @@ section{
     background-color: #fff;
     padding: 20px;
     grid-area: section;
+    
+}
+
+section p{
     font-size: 16px;
     line-height: 27px;
     text-align: justify;
+    margin-bottom: 20px;
 }
 
 aside{
@@ -77,9 +82,10 @@ footer{
                          "widget1   widget2 sidebar "
                          "footer    footer  footer"
     ;
+    grid-template-columns: 1fr 1fr 1fr; /*Sino se especifica, las columnas tomaran tamaño de acuerdo a su contenido*/
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:700px){
     .contenedor{
     grid-template-areas: "header    header "
                          "section   section "
@@ -87,6 +93,7 @@ footer{
                          "widget1   widget2 "
                          "footer    footer  "
 ;
+        grid-template-columns: 1fr 1fr;
 
     }
 
@@ -100,6 +107,7 @@ footer{
                         
                          "footer  "
 ;
+    grid-template-columns: 1fr;
 
     }
 
